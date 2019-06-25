@@ -7,6 +7,7 @@ This is the list of topics
   - [Grid](#Grid)
 - [Javascript](#Javascript)
   - [Functional Progamming](#Functional-Progamming)
+  - [Template Strings](#Template-Strings)
 - [React](#React)
   - [Hooks](#Hooks)
     - [useState](#useState)
@@ -20,6 +21,17 @@ This is the list of topics
 ## Grid
 # Javascript
 ## Functional Progamming
+## Template Strings
+Template strings (or template literals) allows embedded expressions. 
+Enclosed by backslash tick  ` `` ` and contain placeholders (function) by `${expression}`.
+
+```javascript
+a = 5; 
+b = 10;
+
+console.log(`a + b is ${a+b}`) // a + b is 15
+```
+
 # React
 ## Hooks
 What is the purpose of hooks in react? 
