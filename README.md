@@ -4,7 +4,7 @@ This is the list of topics
   - [Structure](#Structure)
 - [CSS](#CSS)
   - [Flexbox](#Flexbox)
-  - [Grid](#Grid)
+  - [CSS Grid](#CSS-Grid)
 - [Javascript](#Javascript)
   - [Functional Progamming](#Functional-Progamming)
   - [Template Strings](#Template-Strings)
@@ -24,7 +24,41 @@ This is the list of topics
 
 ## Flexbox
 
-## Grid
+## CSS Grid
+
+CSS Grid turns an HTML element into a grid container with rows and columns for you to place children elements within the grid.
+
+1. Turn element into a grid continer
+   `display: grid`
+2. To add some columns or rows to the grid
+   `grid-template-columns: 50px 50px` - will creates 2 columns of 50px wide each.
+   `grid-template-rows: 50px 100px` - will creates 2 rows of 50px and 100px
+3. Unit in CSS:
+   `fr`: set the column or row to a fraction of available space
+   `auto`: set the content automatically
+   `%`: adjust to the percent width of its container
+4. To add some grap between columns or rows
+   `grid-column-gap` and `grid-row-gap`
+   Or can use a shorthand property, `grid-gap` - row (-) and column (|)
+5. To control the amount of columns an item will consume, the child element can use
+   `grid-column: 2/4` - makes the item start at the second vertical line of the grid on the left and span to the 4rd line of the grid, consuming two columns.
+   ![column](</Screenshot 2019-06-26 at 15.16.18.png>)
+   Similar thing can be done wit the `grid-row`.
+6. Group cells of the grid together and give the area a custom name.
+
+   > grid-template-areas:
+   > "header header header"
+   > "advert content content"
+   > "footer footer footer";
+
+   The code above merges the top three cells together into an area named `header`, bottom three into a `footer`, and middle row into `advert` and `content`.
+   The empty cell can be designated by use a custom label `.`.
+
+7. You can place an element in the custom area by referencing the name given.
+   `.div5 { grid-area: footer}` - places the `div5` element as a footer.
+
+8. Media queries for create responsive layout
+   Set the `grid-template-areas` and specify each element `grid-area`.
 
 # Javascript
 
